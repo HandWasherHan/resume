@@ -12,15 +12,15 @@ https://xie.infoq.cn/article/d62160c08a5ecb5dca291e159[原文地址]
 === producer
 三种ack
 
-* *0*表示不进行ack
-* *1*表示leader成功接收就ack
-* *all*表示集群同步完成后ack
+* *0* 表示不进行ack
+* *1* 表示leader成功接收就ack
+* *all* 表示集群同步完成后ack
 
 是否会丢？
 
-* *0*会丢
-* *1*会丢，如果leader ack后，未完成同步，直接挂掉，选举了未同步的follower当leader，消息丢失
-* *all*不丢
+* *0* 会丢
+* *1* 会丢，如果leader ack后，未完成同步，直接挂掉，选举了未同步的follower当leader，消息丢失
+* *all* 不丢
 
 === broker
 会丢，cache刷盘时宕机
@@ -28,8 +28,8 @@ https://xie.infoq.cn/article/d62160c08a5ecb5dca291e159[原文地址]
 === consumer
 两种commit场景：
 
-* *先消费再commit*不丢，但commit失败可能导致重复消费
-* *先commit再消费*会丢
+* *先消费再commit* 不丢，但commit失败可能导致重复消费
+* *先commit再消费* 会丢
 
 === 总结
 * broker端极端情况下会丢消息，且无法避免
