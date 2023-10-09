@@ -1,0 +1,16 @@
+== mysql笔记
+:author: han
+=== Explain
+==== type
+* *system*: the table has only one row
+* *const*: the table has at most one matching row. Occuried on using PRIMARY KEY or UNIQUE index 
+* *eq_ref*: one row is read from this table for each combination of rows from the previous tables. it's the best possible join type.
+* *ref: inedx* is used but it's not a PRIMARY KEY or UNIQUE index
+* *fulltext*: the join is performed using a FULLTEXT index
+* *ref_or_null*: MYSQL does an extra search for rows that contains NULL values
+* *range*: Only rows thar are in a given range are retrieved, using an index to select the rows
+* *index*: same as ALL, except that the index tree is scanned. Occurs two ways: 
+  ** the index is a covering index and only the index tree is scanned
+  ** a full table scan is performed using reads from the index to look up data rows in index order
+* *all*: full table scan
+
