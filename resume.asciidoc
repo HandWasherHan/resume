@@ -73,9 +73,8 @@ _from 2023-06 till now_
 ****
 “ezmq”简易消息队列::
 ****
-* 简介：正在开发中，参考了kafka，使用netty做通信框架，raft算法做broker副本同步。
+* 简介：支持消息收发的简易消息队列，broker端支持动态扩展与灾容
 * 链接：https://github.com/HandWasherHan/ezmq
-* 说明：正在开发中，部分功能仅有框架，并不完善
 ****
 ====
 
